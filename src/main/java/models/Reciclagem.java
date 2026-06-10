@@ -1,6 +1,5 @@
 package models;
 
-import jakarta.persistence.Embedded;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,8 +13,5 @@ public class Reciclagem {
     private String TipoMaterial;
     private String PontoColeta;
     private LocalDateTime Data;
-    @Embedded
-    private Usuario Usuario;
-    @Embedded
-    private Produto Produto;
+
 }

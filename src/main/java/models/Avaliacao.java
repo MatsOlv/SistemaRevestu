@@ -1,13 +1,15 @@
 package models;
 
-import jakarta.persistence.Embedded;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@AllArgsConstructor
+@Getter @Setter
+@NoArgsConstructor
 public class Avaliacao {
     private String CicloVida;
     private String Comentario;
     private int Nota;
-    @Embedded
-    private Usuario Usuario;
-    @Embedded
-    private Produto Produto;
 }

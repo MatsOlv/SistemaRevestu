@@ -12,4 +12,7 @@ public class Produto {
     private UUID IdProduto;
     private String Tamanho;
     private String Genero;
+    @ManyToOne
+    @JoinColumn(name = "marca_cnpj", referencedColumnName = "cnpj")
+    private Marca Marca;
 }
