@@ -11,4 +11,6 @@ public class Indica {
     private Ponto Ponto;
     @Embedded
     private Marca Marca;
+
+    //Fazer a cardinalidade e mappedby
 }

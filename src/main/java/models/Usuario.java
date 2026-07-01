@@ -21,4 +21,6 @@ public class Usuario {
     private String NomeUsuario;
     @Embedded
     private Pessoa Pessoa;
+
+    //fazer mappedby de avaliação
 }

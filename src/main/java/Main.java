@@ -5,6 +5,8 @@ public class Main {
         Scanner sc = new Scanner (System.in);
         int escolha;
 
+// fazer os metodos dos cadastros (entender como usa o @ do jakarta nisso)
+
         do {
             System.out.println(
                     "--------------------\n" +

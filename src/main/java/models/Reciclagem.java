@@ -1,9 +1,7 @@
 package models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -16,4 +14,11 @@ public class Reciclagem {
     private String PontoColeta;
     private LocalDateTime Data;
 
+    @ManyToMany
+    private Usuario usuario;
+
+    @ManyToMany
+    private Produto produto;
+
+    //fazer o mappedby dos many
 }

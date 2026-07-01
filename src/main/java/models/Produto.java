@@ -15,4 +15,6 @@ public class Produto {
     @ManyToOne
     @JoinColumn(name = "marca_cnpj", referencedColumnName = "cnpj")
     private Marca Marca;
+
+    //fazer mappedby de avaliação
 }
