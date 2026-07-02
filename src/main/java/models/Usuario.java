@@ -1,26 +1,39 @@
 package models;
 
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Embeddable
-public class Usuario {
-    @Id
-    private String Cpf;
-    private String NomeUsuario;
-    @Embedded
-    private Pessoa Pessoa;
+public class Usuario extends Pessoa{
 
-    //fazer mappedby de avaliação
-}
+    public Usuario(String cpf, String nomeUsuario) {
+        super("nome", new Endereco(), new Contato());
+        this.cpf = cpf;
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    @Id
+    private String cpf;
+    private String nomeUsuario;
+
+    @OneToMany(mappedBy = "usuario" )
+    private List<Avaliacao> avaliacao;
+
+    @ManyToMany(mappedBy = "usuario" )
+    private List<Reciclagem> reciclagem;
+
+    public static Usuario Cadastrar() {
+
+
+    }
+
+    }

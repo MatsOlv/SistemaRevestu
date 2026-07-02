@@ -2,15 +2,18 @@ package models;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Indica {
-    @Embedded
-    private Reciclagem Reciclagem;
-    @Embedded
-    private Ponto Ponto;
-    @Embedded
-    private Marca Marca;
-
-    //Fazer a cardinalidade e mappedby
+    @ManyToOne
+    @JoinColumn(name = "id_reciclagem")
+    private Reciclagem reciclagem;
+    @ManyToOne
+    @JoinColumn(name = "id_ponto")
+    private Ponto ponto;
+    @ManyToOne
+    @JoinColumn(name = "id_marca")
+    private Marca marca;
 }

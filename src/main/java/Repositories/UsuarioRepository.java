@@ -11,15 +11,15 @@ import java.util.Optional;
 public interface UsuarioRepository {
 
     @Insert
-    void cadastrarUsuario (Usuario Usuario);
+    void cadastrarUsuario (Usuario usuario);
 
     @Find
-    Optional <Usuario>  buscarUsuario (String CPF);
+    Optional <Usuario>  buscarUsuario (String cpf);
 
     @Update
-    void atualizarUsuario (Usuario Usuario);
+    void atualizarUsuario (Usuario usuario);
 
     @Delete
-    void deletarUsuario (Usuario Usuario);
+    void deletarUsuario (Usuario usuario);
     
 }

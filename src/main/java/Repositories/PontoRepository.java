@@ -10,14 +10,14 @@ import java.util.Optional;
 public interface PontoRepository {
 
     @Insert
-    void cadastrarPonto (Ponto Ponto);
+    void cadastrarPonto (Ponto ponto);
 
     @Find
-    Optional<Ponto> buscarPonto (String IdPonto);
+    Optional<Ponto> buscarPonto (String idPonto);
 
     @Update
-    void atualizarPonto (Ponto Ponto);
+    void atualizarPonto (Ponto ponto);
 
     @Delete
-    void deletarPonto (Ponto Ponto);
+    void deletarPonto (Ponto ponto);
 }

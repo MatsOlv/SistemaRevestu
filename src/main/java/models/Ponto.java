@@ -16,7 +16,7 @@ import lombok.Setter;
 @Setter
 public class Ponto {
     @Id
-    private String IdPonto;
-    private String NomePonto;
-    private String Localizacao;
+    private String idPonto;
+    private String nomePonto;
+    private String localizacao;
 }

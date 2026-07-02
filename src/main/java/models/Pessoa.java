@@ -1,9 +1,6 @@
 package models;
 
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Getter;
@@ -13,13 +10,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
-@Embeddable
-public class Pessoa {
-    @Id
-    private String IdPessoa;
-    private String Nome;
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Pessoa {
+
+    private String nome;
     @Embedded
-    private Endereco Endereco;
+    private Endereco endereco;
     @Embedded
-    private Contato Contato;
+    private Contato contato;
 }

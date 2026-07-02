@@ -10,12 +10,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
-public class Endereco {
-    private String Cep;
-    private String Numero;
-    private String Rua;
-    private String Bairro;
-    private String Cidade;
-    private String Estado;
-    private String Pais;
+public class  Endereco {
+    private String cep;
+    private String numero;
+    private String rua;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String pais;
 }

@@ -9,16 +9,17 @@ import java.util.UUID;
 public class Reciclagem {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID IdReciclagem;
-    private String TipoMaterial;
-    private String PontoColeta;
-    private LocalDateTime Data;
+    private UUID idReciclagem;
+    private String tipoMaterial;
+    private String pontoColeta;
+    private LocalDateTime data;
 
     @ManyToMany
+    @JoinColumn(name = "id_Usuario")
     private Usuario usuario;
 
     @ManyToMany
+    @JoinColumn(name = "id_produto")
     private Produto produto;
 
-    //fazer o mappedby dos many
 }

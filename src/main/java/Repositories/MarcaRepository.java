@@ -9,15 +9,15 @@ import java.util.Optional;
 
 public interface MarcaRepository {
     @Insert
-    void cadastrarMarca (Marca Marca);
+    void cadastrarMarca (Marca marca);
 
     @Find
-    Optional <Marca> buscarMarca (String Cnpj);
+    Optional <Marca> buscarMarca (String cnpj);
 
     @Update
-    void atualizarMarca (Marca Marca);
+    void atualizarMarca (Marca marca);
 
     @Delete
-    void deletarMarca (Marca Marca);
+    void deletarMarca (Marca marca);
 
 }

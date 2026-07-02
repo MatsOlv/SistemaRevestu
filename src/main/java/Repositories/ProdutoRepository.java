@@ -12,14 +12,14 @@ import java.util.UUID;
 public interface ProdutoRepository {
 
     @Insert
-    void cadastrarProduto (Produto Produto);
+    void cadastrarProduto (Produto produto);
 
     @Find
-    Optional <Produto> buscarProduto (UUID IdProduto);
+    Optional <Produto> buscarProduto (UUID idProduto);
 
     @Update
-    void atualizarProduto (Produto Produto);
+    void atualizarProduto (Produto produto);
 
     @Delete
-    void deletarProduto (Produto Produto);
+    void deletarProduto (Produto produto);
 }

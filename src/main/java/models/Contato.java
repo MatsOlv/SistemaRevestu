@@ -11,6 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter @Setter
 public class Contato {
-    private String Email;
-    private String Telefone;
+    private String email;
+    private String telefone;
 }

@@ -14,13 +14,10 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-@Embeddable
-public class Marca {
+public class Marca extends Pessoa{
     @Id
-    private String Cnpj;
-    private String NivelSustentabilidade;
-    @Embedded
-    private Pessoa Pessoa;
+    private String cnpj;
+    private String nivelSustentabilidade;
     @OneToMany(mappedBy = "marca")
-    private List<Produto> produtos = new ArrayList<>();
+    private List<Produto> produtos;
 }
