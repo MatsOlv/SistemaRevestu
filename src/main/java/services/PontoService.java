@@ -6,6 +6,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class PontoService {
 
-    private PontoRepository pontoRepository;
+    private final PontoRepository pontoRepository;
 
 }
