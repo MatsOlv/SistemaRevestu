@@ -1,4 +1,4 @@
-package Repositories;
+package repositories;
 
 import jakarta.data.repository.Delete;
 import jakarta.data.repository.Find;
@@ -17,9 +17,9 @@ public interface AvaliacaoRepository {
     Optional <Avaliacao> buscarAvaliacao (UUID idAvaliacao);
 
     @Update
-    void atualizarAvaliacao (Avaliacao avaliaca);
+    void atualizarAvaliacao (Avaliacao avaliacao);
 
     @Delete
-    void deletarAvaliacao (Avaliacao avaliaca);
+    void deletarAvaliacao (Avaliacao avaliacao);
 
 }

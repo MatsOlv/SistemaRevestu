@@ -1,4 +1,4 @@
-package Repositories;
+package repositories;
 
 import jakarta.data.repository.Delete;
 import jakarta.data.repository.Find;

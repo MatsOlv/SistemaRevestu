@@ -13,10 +13,11 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Usuario extends Pessoa{
+public class Usuario extends Pessoa {
 
-    public Usuario(String cpf, String nomeUsuario) {
-        super("nome", new Endereco(), new Contato());
+
+    public Usuario(String nome, Endereco endereco, Contato contato, String cpf, String nomeUsuario) {
+        super(nome, endereco, contato);
         this.cpf = cpf;
         this.nomeUsuario = nomeUsuario;
     }
@@ -25,15 +26,11 @@ public class Usuario extends Pessoa{
     private String cpf;
     private String nomeUsuario;
 
-    @OneToMany(mappedBy = "usuario" )
+    @OneToMany(mappedBy = "usuario")
     private List<Avaliacao> avaliacao;
 
-    @ManyToMany(mappedBy = "usuario" )
+    @ManyToMany(mappedBy = "usuario")
     private List<Reciclagem> reciclagem;
 
-    public static Usuario Cadastrar() {
-
-
-    }
 
     }
